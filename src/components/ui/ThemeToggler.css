@@ -1,0 +1,15 @@
+.toggler-btn {
+    border: 1px solid var(--text-color);
+    padding: 5px;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    margin: 2px 0px 0px 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.15s;
+}

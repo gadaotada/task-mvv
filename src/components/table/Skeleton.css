@@ -1,0 +1,35 @@
+.skeleton-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skeleton-table th, .skeleton-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.th-n-c {
+    max-width: 94px;
+}
+
+.th-hm-c {
+    max-width: 60px;
+}
+
+.th-hsa-c {
+    max-width: 30px;
+}
+
+.skeleton-box {
+    height: 16px;
+    background-color: var(--background-color);
+    margin: 4px 0;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { background-color: var(--background-hover-color); }
+    50% { background-color: var(--background-color); }
+    100% { background-color: var(--background-hover-color); }
+}
