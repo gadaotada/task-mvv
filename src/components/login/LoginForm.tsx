@@ -30,7 +30,8 @@ const LoginForm: React.FC = () => {
     
         if (password.trim().length < 3) {
             passwordError = 'Password must be at least 3 characters and one uppercase letter.';
-        } else if (!/[A-Z]/.test(password)) {
+            // cyrillic support
+        } else if (!/\p{Lu}/u.test(password)) {
             passwordError = 'Password must contain at least one uppercase letter.';
         }
     
@@ -132,6 +133,7 @@ const LoginForm: React.FC = () => {
                             autoComplete="current-password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            enterKeyHint="send"
                         />
                     </div>
                     <button 
